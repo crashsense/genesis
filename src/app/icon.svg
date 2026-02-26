@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="ring1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="ring2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="ring3" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#030014" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f0529"/>
+      <stop offset="100%" stop-color="#030014"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#bg)"/>
+
+  <!-- Outer glow -->
+  <circle cx="256" cy="256" r="200" fill="url(#glow)"/>
+
+  <!-- Orbital ring 1 — tilted ellipse -->
+  <ellipse cx="256" cy="256" rx="180" ry="70" transform="rotate(-30 256 256)" stroke="url(#ring1)" stroke-width="3" fill="none"/>
+
+  <!-- Orbital ring 2 — tilted opposite -->
+  <ellipse cx="256" cy="256" rx="170" ry="65" transform="rotate(40 256 256)" stroke="url(#ring2)" stroke-width="2.5" fill="none"/>
+
+  <!-- Orbital ring 3 — nearly vertical -->
+  <ellipse cx="256" cy="256" rx="155" ry="55" transform="rotate(90 256 256)" stroke="url(#ring3)" stroke-width="2" fill="none"/>
+
+  <!-- Orbiting particles -->
+  <circle cx="130" cy="162" r="8" fill="#6366f1">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="130" cy="162" r="14" fill="#6366f1" opacity="0.2"/>
+
+  <circle cx="382" cy="198" r="6" fill="#a855f7">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="382" cy="198" r="11" fill="#a855f7" opacity="0.15"/>
+
+  <circle cx="340" cy="370" r="7" fill="#ec4899">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="340" cy="370" r="12" fill="#ec4899" opacity="0.15"/>
+
+  <circle cx="170" cy="350" r="5" fill="#06b6d4">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Core reactor — central sphere -->
+  <circle cx="256" cy="256" r="42" fill="url(#core)" opacity="0.9"/>
+  <circle cx="256" cy="256" r="42" fill="none" stroke="white" stroke-width="1.5" opacity="0.2"/>
+
+  <!-- Inner bright core -->
+  <circle cx="256" cy="256" r="18" fill="white" opacity="0.25"/>
+  <circle cx="256" cy="256" r="8" fill="white" opacity="0.5"/>
+
+  <!-- "G" letter in center -->
+  <text x="256" y="272" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="44" fill="white" opacity="0.95">G</text>
+</svg>

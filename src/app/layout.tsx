@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "GENESIS — Idea Fusion Reactor",
+  title: "GENESIS \u2014 Idea Fusion Reactor",
   description:
     "Throw in two unrelated concepts. Watch as AI discovers hidden structural connections that nobody has ever seen before. The world's first cross-domain idea fusion engine.",
   keywords: [
@@ -26,18 +26,25 @@ export const metadata: Metadata = {
     "creative AI",
   ],
   openGraph: {
-    title: "GENESIS — Idea Fusion Reactor",
+    title: "GENESIS \u2014 Idea Fusion Reactor",
     description:
-      "Discover impossible connections between any two concepts. AI-powered cross-domain structural analogy engine.",
+      "Fuse any two ideas. Discover hidden structural isomorphisms that nobody has ever seen before.",
     type: "website",
     siteName: "GENESIS",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GENESIS — Idea Fusion Reactor",
+    title: "GENESIS \u2014 Idea Fusion Reactor",
     description:
-      "Discover impossible connections between any two concepts.",
+      "Fuse any two ideas. Discover what nobody has.",
+    creator: "@crashsense",
   },
+  metadataBase: new URL(
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "http://localhost:3000"
+  ),
 };
 
 export default function RootLayout({

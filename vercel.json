@@ -1,7 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "regions": ["iad1", "sfo1", "hnd1", "cdg1", "sin1"],
   "functions": {
     "src/app/api/fusion/route.ts": {
       "maxDuration": 60
